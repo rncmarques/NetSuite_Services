@@ -6,6 +6,38 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "axios": "^0.26.1",
+    "jest": "^27.5.1"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(mjs?|jsx?|js?|tsx?|ts?)$",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.mjs$": "babel-jest"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/build/",
+      "<rootDir>/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "mjs"
+    ],
+    "roots": [
+      "<rootDir>"
+    ],
+    "modulePaths": [
+      "<rootDir>",
+      "<rootDir>/src/"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "type" : "module"
 }
